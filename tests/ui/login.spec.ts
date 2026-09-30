@@ -1,8 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '@pages/LoginPage.js';
-import { DashboardPage } from '@pages/DashboardPage.js';
-import { environment } from '@config/environments.js';
-import data from '@data/users.json' with { type: 'json' };
+
+import { LoginPage } from '../../pages/LoginPage.js';
+import { DashboardPage } from '../../pages/DashboardPage.js';
+import { environment } from '../../config/environments.js';
+import data from '../../data/users.json' with { type: 'json' };
 
 test.describe('OrangeHRM Login', () => {
 
@@ -29,6 +30,10 @@ test.describe('OrangeHRM Login', () => {
       data.invalidUser.username,
       data.invalidUser.password
     );
+
+    await expect(loginPage.invalidCredentialsMessage).toBeVisible();
+
   })
+
 
 });

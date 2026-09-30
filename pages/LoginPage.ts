@@ -5,6 +5,7 @@ export class LoginPage {
   readonly usernameInput: Locator;
   readonly passwordInput: Locator;
   readonly loginButton: Locator;
+  readonly invalidCredentialsMessage: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -14,6 +15,7 @@ export class LoginPage {
     this.loginButton = page.getByRole('button', {
       name: 'Login',
     });
+    this.invalidCredentialsMessage = page.getByText('Invalid credentials')
   }
 
   async navigateToLoginPage(): Promise<void> {
@@ -24,5 +26,9 @@ export class LoginPage {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
     await this.loginButton.click();
+  }
+
+  async isInvalidCredentialsDisplayed(): Promise<boolean> {
+    return await this.invalidCredentialsMessage.isVisible();
   }
 }
