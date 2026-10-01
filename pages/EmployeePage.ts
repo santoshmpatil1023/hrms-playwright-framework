@@ -6,7 +6,6 @@ export class EmployeePage {
   readonly firstNameInput: Locator;
   readonly middleNameInput: Locator;
   readonly lastNameInput: Locator;
-  readonly employeeIdInput: Locator;
   readonly saveButton: Locator;
 
   constructor(page: Page) {
@@ -15,10 +14,6 @@ export class EmployeePage {
     this.firstNameInput = page.getByPlaceholder('First Name');
     this.middleNameInput = page.getByPlaceholder('Middle Name');
     this.lastNameInput = page.getByPlaceholder('Last Name');
-
-    this.employeeIdInput = page
-      .locator('input')
-      .nth(4);
 
     this.saveButton = page.getByRole('button', {
       name: 'Save',
