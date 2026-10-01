@@ -10,12 +10,9 @@ export class PIMPage {
   constructor(page: Page) {
     this.page = page;
 
-    this.pimMenu = page.getByRole('link', { name: 'PIM' }); //page.getByText('PIM', { exact: true });
-    this.addEmployeeMenu = page.getByRole('button', { name: ' Add' }) //page.getByText('Add Employee', {exact: true,});
-
-    this.employeeListMenu = page.getByText('Employee List', {
-      exact: true,
-    });
+    this.pimMenu = page.getByRole('link', { name: 'PIM' });
+    this.addEmployeeMenu = page.getByRole('link', { name: 'Add Employee' });
+    this.employeeListMenu = page.getByRole('link', { name: 'Employee List' })
   }
 
   async navigateToPIM(): Promise<void> {

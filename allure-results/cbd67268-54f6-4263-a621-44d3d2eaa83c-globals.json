@@ -1,1 +1,0 @@
-{"attachments":[],"errors":[{"message":"beforeEach hook failed: Test timeout of 30000ms exceeded while running \"beforeEach\" hook.","trace":"Test timeout of 30000ms exceeded while running \"beforeEach\" hook.\n    at C:\\Users\\Hp\\Desktop\\hrms-playwright-framework\\tests\\ui\\pim.spec.ts:14:10","timestamp":1790836883788}]}
