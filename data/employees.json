@@ -1,0 +1,12 @@
+{
+  "employee1": {
+    "firstName": "Santosh",
+    "middleName": "Test",
+    "lastName": "Automation"
+  },
+  "employee2": {
+    "firstName": "Automation",
+    "middleName": "Playwright",
+    "lastName": "Tester"
+  }
+}
